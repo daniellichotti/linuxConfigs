@@ -108,5 +108,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
+alias open="xdg-open"
+
 alias ll="exa -l -g --icons --git"
 alias llt="exa -1 --icons --tree --git-ignore"
