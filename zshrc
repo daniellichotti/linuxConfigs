@@ -112,3 +112,10 @@ alias open="xdg-open"
 
 alias ll="exa -l -g --icons --git"
 alias llt="exa -1 --icons --tree --git-ignore"
+
+
+alias rclonepull="rclone sync google-drive:/Obsidian ~/gdrive"
+alias rclonepush="rclone sync ~/gdrive google-drive:/Obsidian"
+
+# Turso
+export PATH="/home/daniel/.turso:$PATH"
