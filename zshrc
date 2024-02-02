@@ -75,7 +75,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 plugins=(git)
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +113,9 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-alias open="xdg-open"
+# alias open="xdg-open"
+alias open="gthumb"
+
 
 alias ll="exa -l -g --icons --git"
 alias llt="exa -1 --icons --tree --git-ignore"
@@ -119,3 +126,10 @@ alias rclonepush="rclone sync ~/gdrive google-drive:/Obsidian"
 
 # Turso
 export PATH="/home/daniel/.turso:$PATH"
+
+# bun completions
+[ -s "/home/daniel/.bun/_bun" ] && source "/home/daniel/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
