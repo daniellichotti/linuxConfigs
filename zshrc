@@ -7,7 +7,9 @@ export PATH="$PATH:/usr/bin"
 export STARSHIP_CONFIG=~/.config/starship.toml
 
 
-figlet -f smshadow.flf WASSUP | lolcat
+#figlet -f smshadow.flf WASSUP | lolcat
+#fortune
+(cowsay "$(fortune)")
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,6 +117,10 @@ eval "$(zoxide init zsh)"
 
 # alias open="xdg-open"
 alias open="gthumb"
+alias weather="curl wttr.in"
+alias spotify="ncspot"
+alias fileman="nnn"
+alias maps="telnet mapscii.me"
 
 
 alias ll="exa -l -g --icons --git"
