@@ -71,10 +71,11 @@ zstyle ':omz:update' frequency 13
 # Plugins
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-plugins=(git)
 plugins=( 
     # other plugins...
+    git
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -97,6 +98,15 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Personal Aliases
+
+#alias git
+alias gswc="git switch -c feature/branch"
+alias gsw="git switch feature/branch"
+alias gst="git status"
+alias gaa="git add ."
+alias gcmsg="git commit -m"
+alias ggp="git push origin feature/branch"
+
 
 # alias open="xdg-open"
 alias open="gthumb"
