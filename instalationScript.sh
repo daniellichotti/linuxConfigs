@@ -27,6 +27,11 @@ curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti
 #baixar o arquivo de conf do tmux
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf &&
 
+# zsh autosugestions e highlight
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
+
+
 
 
 
