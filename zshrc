@@ -91,7 +91,7 @@ alias cls="clear" # limpar a tela
 alias htop="htop --tree" # htop com uma visao mais amigavel
 
 #tmux aliases
-alias th="curl -s https://gist.githubusercontent.com/daniellichotti/289a71b9b7368853bc8f3d68be377db3/raw/9f5f024cf6b5905359bc5cc38836c24c09acc287/gistfile1.txt | zsh" # Mostra um cheatsheet dos atalhos
+alias th="curl -s https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/tmuxCheatsheet | zsh" # Mostra um cheatsheet dos atalhos
 alias tm="tmux" # Abre o tmux com o comando padrão: tm
 alias tn="tmux new -s" # Cria uma nova sessão com um nome específico: tn minha_sessao
 alias ta="tmux attach -t" # Reconecta-se a uma sessão existente: ta minha_sessao
