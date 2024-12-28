@@ -1,3 +1,10 @@
+##Comandos:
+```
+set /p distroName="Digite o nome da distro: " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && passwd dnl" && .\%distroName%.exe config --default-user dnl && start cmd /k "echo Novo Prompt aberto! && pause" && exit
+
+sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman -Syu --noconfirm
+```
+
 Instalando o WSL:
 wsl --install
 
