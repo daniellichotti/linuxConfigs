@@ -4,9 +4,10 @@ echo 'Instalando git e base-devel...'
 sudo pacman -S --needed git base-devel && echo "Git e base-devel instalados com sucesso!" || { echo "Erro ao instalar Git e base-devel."; exit 1; }
 
 echo 'Instalando zsh, tmux, zoxide, exa, figlet, lolcat, nnn, bat, fzf, man-pages, man-db, fd, yazi e outros pacotes...'
-sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat nnn bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick && \
-echo "Pacotes instalados com sucesso!" || { echo "Erro ao instalar os pacotes."; exit 1; }
+sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat nnn bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick && echo "Pacotes instalados com sucesso!" || { echo "Erro ao instalar os pacotes."; exit 1; }
 
+echo 'Instalando OhMyZsh...'
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended && echo "OhMyZsh instalado com sucesso!" || { echo "Erro ao instalar OhMyZsh."; exit 1; }
 
 export SHELL=/bin/bash &&
 
