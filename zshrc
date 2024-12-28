@@ -144,6 +144,26 @@ gCreateAdd() {
     gh browse
 }
 
+
+alias dps="docker ps" # Alias para listar containers em execução
+alias dpsa="docker ps -a" # Alias para listar todos os containers (em execução e parados)
+alias dstart="docker start" # Alias para iniciar um container
+alias dstop="docker stop" # Alias para parar um container
+alias drestart="docker restart" # Alias para reiniciar um container
+alias drm="docker rm" # Alias para remover um container
+alias dexec="docker exec -it" # Alias para executar um comando dentro de um container
+alias dbash="docker exec -it $1 /bin/bash" # Alias para acessar o terminal de um container (com /bin/bash)
+alias dimages="docker images" # Alias para listar imagens
+alias dpull="docker pull" # Alias para baixar uma imagem
+alias dbuild="docker build -t" # Alias para construir uma imagem a partir de um Dockerfile
+alias drmi="docker rmi" # Alias para remover uma imagem
+alias dvolumes="docker volume ls" # Alias para listar volumes
+alias dvolume="docker volume create" # Alias para criar um volume
+alias drv="docker volume rm" # Alias para remover um volume
+alias dinfo="docker info" # Alias para mostrar informações sobre o Docker
+alias dlogs="docker logs" # Alias para exibir logs de um container
+alias dstats="docker stats" # Alias para ver o uso de recursos do Docker
+
 criarProjeto() {
         echo "Escolha uma opção:"
         echo "1. Projeto React JS com Vite"
