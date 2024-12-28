@@ -26,10 +26,10 @@ RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/
 echo 'Alterando o shell para zsh...'
 sudo chsh -s /bin/zsh $(whoami) && echo "Shell padrão alterado para Zsh."
 
-# Instalar Starship
+# Instalar Starship (com 'yes' para confirmar automaticamente)
 echo 'Instalando Starship...'
 mkdir -p ~/.config
-curl -sS https://starship.rs/install.sh --yes | sh && echo "Starship instalado com sucesso!"
+yes | curl -sS https://starship.rs/install.sh | sh && echo "Starship instalado com sucesso!"
 
 # Instalar Zsh autosuggestions
 echo 'Instalando Zsh autosuggestions...'
