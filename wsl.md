@@ -3,7 +3,8 @@ Essa versão do Arch que eu utilizo é bem leve se comparado a outras opções (
 https://github.com/yuk7/ArchWSL
 Basta extrair os arquivos para uma pasta de preferência e executar o arquivo Arch que será iniciada a instalação.
 ```
-set /p distroName="Digite o nome da distro: " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && passwd dnl" && .\%distroName%.exe config --default-user dnl && start cmd /k "echo Novo Prompt aberto! && pause" && exit
+set /p distroName="Digite o nome da distro: " && set /p userPassword="Digite a senha para o usuário 'dnl': " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && echo 'dnl:%userPassword%' | chpasswd" && %distroName%.exe config --default-user dnl && start cmd /k "echo Configuração concluída! && pause" && exit
+
 ```
 ## Gerenciadores de pacotes:
 ```
