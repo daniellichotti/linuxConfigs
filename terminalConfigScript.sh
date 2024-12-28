@@ -38,16 +38,22 @@ curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf
 
 # Perguntar se o usuário deseja instalar o Node.js
-echo 'Você deseja instalar o Node.js?'
-echo '1 - Sim'
-echo '2 - Não'
-read -p "Escolha uma opção [1/2]: " node_choice
+while true; do
+    echo 'Você deseja instalar o Node.js?'
+    echo '1 - Sim'
+    echo '2 - Não'
+    read -p "Escolha uma opção [1/2]: " node_choice
 
-if [ "$node_choice" == "1" ]; then
-    echo 'Instalando Node.js e npm...'
-    sudo pacman -S --noconfirm nodejs npm && echo "Node.js e npm instalados com sucesso!"
-else
-    echo 'Node.js não será instalado.'
-fi
+    if [ "$node_choice" == "1" ]; then
+        echo 'Instalando Node.js e npm...'
+        sudo pacman -S --noconfirm nodejs npm && echo "Node.js e npm instalados com sucesso!"
+        break
+    elif [ "$node_choice" == "2" ]; then
+        echo 'Node.js não será instalado.'
+        break
+    else
+        echo 'Opção inválida. Por favor, escolha 1 ou 2.'
+    fi
+done
 
 echo "Configuração concluída! Reinicie o terminal para aplicar as mudanças."
