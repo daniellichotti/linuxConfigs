@@ -13,7 +13,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 export SHELL=/bin/bash
 
 echo 'Instalando Starship...'
-curl -sS https://starship.rs/install.sh | sh && echo "Starship instalado com sucesso!" || { echo "Erro ao instalar Starship."; exit 1; }
+yes | curl -sS https://starship.rs/install.sh | sh && echo "Starship instalado com sucesso!" || { echo "Erro ao instalar Starship."; exit 1; }
 
 echo 'Instalando Zsh autosugestions...'
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && echo "zsh-autosuggestions instalado com sucesso!" || { echo "Erro ao instalar zsh-autosuggestions."; exit 1; }
