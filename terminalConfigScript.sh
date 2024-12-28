@@ -3,6 +3,9 @@
 echo 'Instalando git e base-devel...'
 sudo pacman -S --needed git base-devel && echo "Git e base-devel instalados com sucesso!" || { echo "Erro ao instalar Git e base-devel."; exit 1; }
 
+echo 'Instalando Yay...'
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay && echo "Yay instalado com sucesso!" 
+
 echo 'Instalando zsh, tmux, zoxide, exa, figlet, lolcat, nnn, bat, fzf, man-pages, man-db, fd, yazi e outros pacotes...'
 sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat nnn bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick && echo "Pacotes instalados com sucesso!" || { echo "Erro ao instalar os pacotes."; exit 1; }
 
@@ -31,3 +34,12 @@ echo 'Copiando meus arquivos .zshrc, starship.toml e tmux.conf...'
 curl -o ~/.zshrc https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/zshrc && \
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/starship && \
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf
+
+
+# Alterando tema do ZSH
+#yay -S --noconfirm zsh-theme-powerlevel10k-git && echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc && chsh -s /usr/bin/zsh
+#Reinicie o terminal.
+# Para configurar:
+#p10k configure
+
+
