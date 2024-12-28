@@ -20,13 +20,6 @@ tls # Lista todas as sessões do tmux: tls
 tr # Renomeia a janela atual: tr novo_nome
 tcode #Cria uma sessão com Astrovim e um terminal ao lado
 
---------------exa--------------
-ll #Lista todos os arquivos do diretorio
-llt #Lista todos os arquivos do diretorio em uma árvore
-
---------------nnn--------------
-3n # Abre o file manager
-
 --------------git--------------
 gswc #"git switch -c feature/branch"
 gsw #"git switch feature/branch"
@@ -67,8 +60,9 @@ open #Abre um arquivo de mídia
 weather #Mostra o tempo
 spotify #chama o spotify no terminal
 maps #Mostra mapa no terminal
-
+ll #Lista todos os arquivos do diretorio
+llt #Lista todos os arquivos do diretorio em uma árvore
+fm # Abre o file manager Yazi
 rclonepull #Puxa a pasta do drive
 rclonepush #Empurra a pasta para o drive
-
 fman #Abre a documentação de algo ex fman git
