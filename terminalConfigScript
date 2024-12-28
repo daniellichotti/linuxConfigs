@@ -5,7 +5,9 @@ echo 'Instaling zsh, tmux, zoxide, exa, figlet, lolcat, nnn, bat, fzf, man-pages
 sudo pacman -S zsh tmux zoxide exa figlet lolcat nnn bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick && echo "Pacotes instalados com sucesso!" || { echo "Erro ao instalar os pacotes."; exit 1; }
 
 echo 'Instaling OhMyZsh...'
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && echo "OhMyZsh instalado com sucesso!" || { echo "Erro ao instalar OhMyZsh."; exit 1; }
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended && echo "OhMyZsh instalado com sucesso!" || { echo "Erro ao instalar OhMyZsh."; exit 1; }
+
+export SHELL=/bin/bash &&
 
 echo 'Instaling Starship...'
 curl -sS https://starship.rs/install.sh | sh && echo Starship instalado com sucesso!" || { echo "Erro ao instalar Starship."; exit 1; } 
@@ -24,3 +26,5 @@ echo 'Copying my .zshrc, starship.toml and tmux configs...' &&
 curl -o ~/.zshrc https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/zshrc &&
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/starship &&
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf
+
+exec zsh
