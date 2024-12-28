@@ -37,4 +37,17 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/daniellichotti/linuxConfigs/m
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/starship
 curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf
 
+# Perguntar se o usuário deseja instalar o Node.js
+echo 'Você deseja instalar o Node.js?'
+echo '1 - Sim'
+echo '2 - Não'
+read -p "Escolha uma opção [1/2]: " node_choice
+
+if [ "$node_choice" == "1" ]; then
+    echo 'Instalando Node.js e npm...'
+    sudo pacman -S --noconfirm nodejs npm && echo "Node.js e npm instalados com sucesso!"
+else
+    echo 'Node.js não será instalado.'
+fi
+
 echo "Configuração concluída! Reinicie o terminal para aplicar as mudanças."
