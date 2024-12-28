@@ -29,7 +29,7 @@ sudo chsh -s /bin/zsh $(whoami) && echo "Shell padrão alterado para Zsh."
 # Instalar Starship (com 'yes' para confirmar automaticamente)
 echo 'Instalando Starship...'
 mkdir -p ~/.config
-yes | curl -sS https://starship.rs/install.sh | sh && echo "Starship instalado com sucesso!"
+curl -sS https://starship.rs/install.sh | sh -s -- -y && echo "Starship instalado com sucesso!"
 
 # Instalar Zsh autosuggestions
 echo 'Instalando Zsh autosuggestions...'
