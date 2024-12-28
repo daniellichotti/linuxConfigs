@@ -1,0 +1,53 @@
+{
+	//snipets react
+	"React Functional Component": {
+	  "prefix": "ef",
+	  "body": [
+		"export interface nameProps {}",
+		"",
+		"export function name(props: nameProps){"
+		"	return ("
+			"		<div></div>"
+				"	)"
+			"}",
+		
+	  ],
+	  "description": "React Functional Component"
+	},
+
+	// snipepts js
+
+	"For Loop": {
+	  "prefix": ["for", "for-const"],
+	  "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+	  "description": "A for loop."
+	},
+
+	// snipepts py
+
+	"func": {
+		"prefix": ["pyfunc"],
+		"body": [
+			"def ${1:myFunction}(${2:say}):"
+			"	print(${2:say})"
+			],
+		"description": "A for loop."
+	  },
+	"pyclass": {
+		"prefix": ["pyclass"],
+		"body": [
+			"class ${1:myClass}:"
+  			"	def __init__(self, ${2:param_1}, ${3:param_2}) -> None:"
+			"		self.${2:param_1} = ${2:param_1}"
+			"		self.${3:param_2} = ${3:param_2}"
+			""
+			"	def saudacao(self):"
+			"		return {self.${2:param_1}}{self.${3:param_2}}"
+		]
+	}
+  
+
+	//snippets vscode and extensions
+	
+
+}
