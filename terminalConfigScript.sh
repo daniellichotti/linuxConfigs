@@ -14,9 +14,9 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay && echo "Yay instalado com sucesso!"
 
-echo 'Instalando VSCode e Docker...'
+echo 'Instalando Docker...'
 #Instalar pacotes com Yay
-yay -S --noconfirm visual-studio-code-bin docker
+yay -S --noconfirm docker
 echo 'Habilite a distro nas Resources do Docker Desktop...'
 
 #Instalar ferramentas dev
