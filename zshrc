@@ -77,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Personal Aliases
 
-alias aliashelp="curl -s https://gist.githubusercontent.com/daniellichotti/3afd55844135af7c2daf1ab0d336f86e/raw/7f4919033c9bb7b33682942466ded83e819363fb/aliases.txt | zsh" # Mostra os aliases
+alias aliashelp="curl -s https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/aliases" # Mostra os aliases
 
 # general
 alias ..="cd .." # Volta uma pasta
