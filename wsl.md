@@ -1,34 +1,14 @@
-##Comandos:
-```
-set /p distroName="Digite o nome da distro: " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && passwd dnl" && .\%distroName%.exe config --default-user dnl && start cmd /k "echo Novo Prompt aberto! && pause" && exit
-
-sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman -Syu --noconfirm
-```
-
-Instalando o WSL:
-wsl --install
-
-Instalando o Arch:
+## Instalando o arch e configurando um usuário:
 Essa versão do Arch que eu utilizo é bem leve se comparado a outras opções (como o Manjaro por exemplo):
 https://github.com/yuk7/ArchWSL
 Basta extrair os arquivos para uma pasta de preferência e executar o arquivo Arch que será iniciada a instalação.
-
-Configurando um usuário:
-echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
-useradd -m -G wheel -s /bin/bash dnl
-passwd dnl
-
-.\Arch2.exe config --default-user dnl (na pasta do arch)
-
-//comando com tudo (executar tudo dentro da pasta)
-wsl -d Arch2 bash -c "echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && passwd dnl && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy archlinux-keyring && sudo pacman -Syu" && .\Arch2.exe config --default-user dnl
-
-
-Atualizando os pacotes da distro:
-sudo pacman-key --init
-sudo pacman-key --populate
-sudo pacman -Sy archlinux-keyring
-sudo pacman -Syu
+```
+set /p distroName="Digite o nome da distro: " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && passwd dnl" && .\%distroName%.exe config --default-user dnl && start cmd /k "echo Novo Prompt aberto! && pause" && exit
+```
+## Gerenciadores de pacotes:
+```
+sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman -Syu --noconfirm
+```
 
 Gerenciadores de pacotes:
 sudo pacman -S yarn npm
@@ -40,22 +20,12 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-Alterando tema do ZSH:
-Para alterar o tema do ZSH eu utilizo o Powerlevel10k
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-chsh -s /usr/bin/zsh
-Reinicie o terminal.
-
 fonte: https://www.tabnews.com.br/dchueri/configurando-o-archlinux-no-windows-com-wsl-2
-
-
-
-
-
-
-
   ```sh
+  Instalando o WSL:
+  wsl --install
+
+
   # Verificando a versão da imagem:
   wsl --list --verbose
   
