@@ -1,6 +1,5 @@
+--------------General--------------
 aliashelp # Mostra os aliases
-
-# general
 .. # Volta uma pasta
 ... # Volta duas pastas
 rm # Pergunta antes de excluir
@@ -11,7 +10,7 @@ mv # move com confirmacao
 cls # limpar a tela
 htop # htop com uma visao mais amigavel
 
-#tmux aliases
+--------------tmux--------------
 th # Mostra um cheatsheet do tmux
 tm # Abre o tmux com o comando padrão: tm
 tn # Cria uma nova sessão com um nome específico: tn minha_sessao
@@ -21,14 +20,14 @@ tls # Lista todas as sessões do tmux: tls
 tr # Renomeia a janela atual: tr novo_nome
 tcode #Cria uma sessão com Astrovim e um terminal ao lado
 
-#exa aliases
+--------------exa--------------
 ll #Lista todos os arquivos do diretorio
 llt #Lista todos os arquivos do diretorio em uma árvore
 
-#nnn aliases
+--------------nnn--------------
 3n # Abre o file manager
 
-#git
+--------------git--------------
 gswc #"git switch -c feature/branch"
 gsw #"git switch feature/branch"
 gst #"git status"
@@ -36,11 +35,11 @@ gaa #"git add ."
 gcmsg #"git commit -m"
 ggp #"git push origin feature/branch"
 
-#github-cli
+--------------github-cli--------------
 gcreate <name> #Cria um repositório com o nome
 gCreateAdd #Criar repositorio no github e enviar o codigo que voce criou para o repositorio
 
-# Docker
+--------------Docker--------------
 dps # para listar containers em execução
 dpsa # para listar todos os containers (em execução e parados)
 dstart # para iniciar um container
@@ -60,8 +59,10 @@ dinfo # para mostrar informações sobre o Docker
 dlogs # para exibir logs de um container
 dstats # para ver o uso de recursos do Docker
 
+--------------Dev--------------
 criarProjeto # Cria um projeto
 
+--------------Others--------------
 open #Abre um arquivo de mídia
 weather #Mostra o tempo
 spotify #chama o spotify no terminal
