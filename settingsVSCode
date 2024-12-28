@@ -1,0 +1,245 @@
+{
+  "symbols.hidesExplorerArrows": false,
+  "workbench.colorTheme": "Min Dark", //define o thema
+  "workbench.iconTheme": "symbols", //define os icones
+  "editor.fontFamily": "Fira Code", //define a fonte
+  "editor.fontSize": 14, //tamanho da fonte
+  "editor.lineHeight": 1.8, //180% do fontesize de altura de linha
+  "editor.rulers": [
+    80,
+    120
+  ], //demarcadores de linha de codigo, com prettier ele usa esse intervalo
+  "editor.wordWrap": "on", //demarcadores de linha de codigo
+  "workbench.startupEditor": "newUntitledFile", //abre o vscode com um arquivo branco
+  "editor.renderLineHighlight": "gutter", //marca a linha selecionada apenas no numero, nao na linha toda
+  "editor.fontLigatures": true, //junta o = com > e vira uma seta por exemplo
+  "workbench.editor.labelFormat": "short", //mostra menos informacao na aba com o nome do arquivo
+  "explorer.compactFolders": false, //nao compacta as pastas na barra do explorer
+  "editor.semanticHighlighting.enabled": false, //pinta variaveis do codigo segundo o tipo dela
+  "breadcrumbs.enabled": false, //desabilita o caminho do arquivo embaixo das abas,
+  "workbench.activityBar.location": "hidden", //posiciona a barra na lateral, pode oculta-la tb
+  "editor.minimap.enabled": true, //tira o minimapa da direita do vscode
+  "editor.scrollbar.vertical": "hidden", //esconde o scroll vertical
+  "editor.scrollbar.horizontal": "hidden", //esconde o scroll horizontal
+  "workbench.statusBar.visible": false, //esconde a statusbar de baixo
+  //"window.titleBarStyle": "native", //remove a barra de titulo dos Edit, View etc
+  "terminal.integrated.env.linux": {},
+  //"apc.electron": { //permite customizar as customizacoes do eletron
+  //    "titleBarStyle": "hiddenInset", 
+  //    "trafficLightPosition": { //posicao do fechar, minimizar etc
+  //        "x": 11,
+  //        "y": 10
+  //    },
+  //    "frame": false
+  //},
+  //"apc.header": { //define a altura do header do vscode
+  //    "height": 36
+  //},
+  //"apc.listRow": { //aumenta a altura de cada item da lista do explorer
+  //    "height": 24
+  //},
+  //"apc.stylesheet": { //permite customizar css do vscode
+  //    ".title-label > h2": "display: none",
+  //    ".editor-actions": "display: none",
+  //    ".nosidebar .inline-tabs-placeholder": "width: 75px",
+  //    ".pane-header": "padding: 0 8px",
+  //    ".pane-body": "padding: 8px",
+  //    ".split-view-view:first-child .pane-header": "display: none !important;",
+  //    ".monaco-list-row": "border-radius: 4px;",
+  //    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
+  //  },
+  //"apc.font.family": "Inter", //define a fonte usada na interface do vscode
+  "window.commandCenter": false, //desabilita o command center no topo
+  "workbench.layoutControl.enabled": false, //desabilita os comandos a direita do topo
+  "explorer.fileNesting.enabled": true, //aninha arquivos de configuracao
+  "explorer.fileNesting.patterns": { //configura alguns patterns para aninhar os arquivos
+    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*",
+    "tailwind.config.js": "tailwind.config*, postcss.config*",
+    ".env.local": ".env*",
+    ".env": ".env*"
+  },
+  "terminal.integrated.fontSize": 14, //fontsize do terminal
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", //fonte do terminal
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "extensions.ignoreRecommendations": true,
+  "typescript.tsserver.log": "off",
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    "*.css": "css"
+  },
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.guard.ts": "typescript",
+    "*.spec.ts": "ts-test",
+    "*.e2e-spec.ts": "ts-test",
+    "vitest.config.e2e.ts": "vite",
+    ".env.example": "gear"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "tv\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ],
+  "editor.parameterHints.enabled": false,
+  "cSpell.language": "en,pt",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "terminal.integrated.showExitAlert": false,
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
+  "typescript.suggest.autoImports": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  //"emmet.syntaxProfiles": {
+  //"!rust",
+  //"!scala",
+  // "!scss"
+  //},
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "git.enableSmartCommit": true,
+  "editor.accessibilitySupport": "off",
+  "explorer.confirmDragAndDrop": false,
+  //"editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit",
+    "source.addMissingImports": "explicit",
+  },
+"eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "graphql"
+],
+"workbench.productIconTheme": "fluent-icons",
+"gitlens.codeLens.authors.enabled": false,
+"editor.tabSize": 2,
+"security.workspace.trust.untrustedFiles": "newWindow",
+"files.exclude": {
+  "**\/CVS": true,
+  "**\/.DS_Store": true,
+  "**\/.hg": true,
+  "**\/.svn": true,
+  "**\/.git": true,
+  ".vscode": true
+  // "node_modules": true
+},
+"update.mode": "start",
+"terminal.integrated.gpuAcceleration": "off",
+"terminal.integrated.defaultProfile.osx": "fish",
+"[jsonc]": {
+  "editor.defaultFormatter": "vscode.json-language-features"
+},
+"[json]": {
+  "editor.defaultFormatter": "vscode.json-language-features"
+},
+"git.openRepositoryInParentFolders": "always",
+"[javascript]": {
+  "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"console-ninja.featureSet": "Community",
+"workbench.editor.empty.hint": "hidden",
+"update.showReleaseNotes": false,
+"apc.activityBar": {
+  "position": "bottom",
+  "hideSettings": true,
+  "size": 48,
+  "itemMargin": 8,
+  "itemSize": 32
+},
+"editor.hideCursorInOverviewRuler": true,
+"explorer.sortOrder": "foldersNestsFiles",
+"cSpell.userWords": [
+  "bootcamp",
+  "chakra",
+  "checkin",
+  "checkins",
+  "clsx",
+  "Codegen",
+  "datadog",
+  "Datetime",
+  "dayjs",
+  "Dotenv",
+  "Elysia",
+  "esbuild",
+  "fastify",
+  "Fastify",
+  "feedbackwidget",
+  "ffprobe",
+  "Hasher",
+  "Hono",
+  "ilike",
+  "IUGU",
+  "jamjuree",
+  "jupiter",
+  "liveblocks",
+  "LIVEBLOCKS",
+  "Marguerita",
+  "middlewares",
+  "mixpanel",
+  "monaco",
+  "nestjs",
+  "omni",
+  "Omni",
+  "Onboarded",
+  "pallas",
+  "postgres",
+  "postgresql",
+  "prefetch",
+  "reactflow",
+  "roboto",
+  "rocketseat",
+  "rotion",
+  "rsxp",
+  "Sandpack",
+  "shiki",
+  "skylab",
+  "sqlite",
+  "supergraph",
+  "svgr",
+  "sympla",
+  "tailwindcss",
+  "textblock",
+  "tiptap",
+  "trpc",
+  "TRPC",
+  "tsup",
+  "unfollow",
+  "Unfollow",
+  "unform",
+  "Unform",
+  "unmark",
+  "upsert",
+  "Usuario",
+  "WEBPUSH"
+],
+"tabnine.experimentalAutoImports": true,
+"workbench.editorAssociations": {
+  "*.db": "sqlite-viewer.option"
+},
+"window.customTitleBarVisibility": "auto",
+"terminal.integrated.env.windows": {},
+"git.confirmSync": false,
+"liveServer.settings.donotShowInfoMsg": true,
+"database-client.autoSync": true,
+"emulator.emulatorPathLinux": "~/Android/Sdk/emulator",
+"emulator.emulatorPath": "~/Android/sdk/emulator",
+"totalTypeScript.hiddenTips": [
+  "type-alias-declaration",
+  "basic-types",
+  "optional-object-property",
+  "typing-function-parameters",
+  "ts-object-type",
+  "typeof"
+],
+}
