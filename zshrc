@@ -100,13 +100,6 @@ alias tls="tmux list-sessions" # Lista todas as sessões do tmux: tls
 alias tr="tmux rename-window" # Renomeia a janela atual: tr novo_nome
 alias tcode="tmux new-session -d nvim \; split-window -h \; attach-session -t 0"
 
-#exa aliases
-alias ll="exa -l -g --icons --git"
-alias llt="exa -1 --icons --tree --git-ignore"
-
-#nnn aliases
-alias 3n="nnn" # fazer um alias para mostrar os atalhos
-
 #alias git
 alias gswc="git switch -c feature/branch"
 alias gsw="git switch feature/branch"
@@ -237,11 +230,16 @@ alias weather="curl wttr.in"
 alias spotify="ncspot"
 alias maps="telnet mapscii.me"
 
+#rclone aliases
 alias rclonepull="rclone sync google-drive:/Obsidian ~/gdrive"
 alias rclonepush="rclone sync ~/gdrive google-drive:/Obsidian"
-
 # opens documentation through fzf (eg: git,zsh etc.)
 alias fman="compgen -c | fzf | xargs man"
+#exa aliases
+alias ll="exa -l -g --icons --git"
+alias llt="exa -1 --icons --tree --git-ignore"
+#nnn aliases
+alias fm="yazi" # fazer um alias para mostrar os atalhos
 
 
 
