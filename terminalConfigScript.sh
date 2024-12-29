@@ -28,9 +28,8 @@ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim && rm -
 
 # Instalar pacotes úteis
 echo 'Instalando pacotes úteis...'
-sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick 
-
-&& echo "Pacotes instalados com sucesso!"
+sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick
+echo "Pacotes instalados com sucesso!"
 
 # Instalar OhMyZsh
 echo 'Instalando OhMyZsh...'
