@@ -1,4 +1,5 @@
-## Instalando o arch e configurando um usuário:
+## Arch WSL
+### 1 - Instalando o arch e configurando um usuário:
 Essa versão do Arch que eu utilizo é bem leve se comparado a outras opções (como o Manjaro por exemplo):
 https://github.com/yuk7/ArchWSL
 Basta extrair os arquivos para uma pasta de preferência e executar o arquivo Arch que será iniciada a instalação.
@@ -6,79 +7,84 @@ Basta extrair os arquivos para uma pasta de preferência e executar o arquivo Ar
 set /p distroName="Digite o nome da distro: " && set /p userPassword="Digite a senha para o usuário 'dnl': " && %distroName%.exe && wsl -d %distroName% bash -c "echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel && useradd -m -G wheel -s /bin/bash dnl && echo 'dnl:%userPassword%' | chpasswd" && %distroName%.exe config --default-user dnl && start cmd /k "echo Configuração concluída! && pause" && exit
 
 ```
-## Gerenciadores de pacotes:
+### 2 - Gerenciadores de pacotes:
 ```
 sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman -Syu --noconfirm
 ```
-
-Gerenciadores de pacotes:
-sudo pacman -S yarn npm
-sudo pacman -S --needed git base-devel
-sudo pacman -S rust
-mkdir tmp
-cd tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 fonte: https://www.tabnews.com.br/dchueri/configurando-o-archlinux-no-windows-com-wsl-2
-  ```sh
-  Instalando o WSL:
+  
+## WSL CheatSheet  
+### Instalando o WSL:
+```
   wsl --install
-
-
-  # Verificando a versão da imagem:
-  wsl --list --verbose
-  
-  # Alterando como Padrão a versão para WSL 2:
-  wsl --set-default-version 2
-  
-  # Mudando imagem (ex:Ubuntu) para o WSL 2:
-  wsl --set-version Ubuntu 2
-  
-  # Selecionando Distro como Principal (ex: Ubuntu-22.04):
-  wsl --setdefault Ubuntu-22.04
-
-  #BACKUP
-  # Listando as distros (para pegar o nome dela):
-  wsl --list
-
-  # Para fazer o Backup:
-  # wsl --export <distro> <filename.tar>
-  wsl --export Ubuntu C:\Users\seu-usuario\Downloads\bkpUbuntuWSL.tar
-
-  # RESTAURAÇÃO do WSL a partir do Backup (pegando da pasta '/Downloads')
-  # Voltando para raiz "C:\"
-  cd /
-
-  # wsl --import <distro> <install location> <filename> 
-  wsl --import Ubuntu  C:\Users\seu-usuario\ubuntu  C:\Users\seu-usuario\Downloads\bkpUbuntuWSL.tar
-
-  # Dentro da distro WSL execute:
-  sudo editor /etc/wsl.conf
-
-  # Adicione o seguinte conteúdo dentro desse '/etc/wsl.conf' (username => seu-usuario):
-  [user]
-  default=username
-
-  # APAGAR - Dentro do Powershell execute:
-  wsl --unregister <distro name>
-
-  # DESLIGAR processos do WSL:
-  # Dentro do Powershell (Abrir como Administrador) execute:
-  wsl --shutdown
-  
-  #Parar o WSL2: Para parar uma distribuição específica do WSL2, use o comando:
-  wsl --terminate <NomeDaDistribuicao>
-
-  #Listar distribuições: Para ver quais distribuições do WSL estão instaladas no seu sistema, use:
-  wsl --list --verbose
-  #Verificar o status de uma distribuição: Para ver as distribuições em execução e mais detalhes, use:
-  wsl --status
+```
+### Verificando a versão da imagem:
+```
+wsl --list --verbose
+```
+### Alterando como Padrão a versão para WSL 2:
+```
+wsl --set-default-version 2
+```
+### Mudando imagem (ex:Ubuntu) para o WSL 2:
+```
+wsl --set-version Ubuntu 2
+```
+### Selecionando Distro como Principal (ex: Ubuntu-22.04):
+```
+wsl --setdefault Ubuntu-22.04
+```
+### BACKUP
+### Listando as distros (para pegar o nome dela):
+```
+wsl --list
+```
+### Para fazer o Backup:
+### wsl --export <distro> <filename.tar>
+```
+wsl --export Ubuntu C:\Users\seu-usuario\Downloads\bkpUbuntuWSL.tar
+```
+### RESTAURAÇÃO do WSL a partir do Backup (pegando da pasta '/Downloads')
+### Voltando para raiz "C:\"
+```
+cd /
+```
+### wsl --import <distro> <install location> <filename> 
+```
+wsl --import Ubuntu  C:\Users\seu-usuario\ubuntu  C:\Users\seu-usuario\Downloads\bkpUbuntuWSL.tar
+```
+### Dentro da distro WSL execute:
+```
+sudo editor /etc/wsl.conf
+```
+### Adicione o seguinte conteúdo dentro desse '/etc/wsl.conf' (username => seu-usuario):
+```
+[user]
+default=username
+```
+### APAGAR - Dentro do Powershell execute:
+```
+wsl --unregister <distro name>
+```
+### DESLIGAR processos do WSL:
+### Dentro do Powershell (Abrir como Administrador) execute:
+```
+wsl --shutdown
+```
+### Parar o WSL2: Para parar uma distribuição específica do WSL2, use o comando:
+```
+wsl --terminate <NomeDaDistribuicao>
+```
+### Listar distribuições: Para ver quais distribuições do WSL estão instaladas no seu sistema, use:
+```
+wsl --list --verbose
+```
+### Verificar o status de uma distribuição: Para ver as distribuições em execução e mais detalhes, use:
+```
+wsl --status
 ```
 
 ## Anotações WSL
-
 > ### Se caso WSL ficar com a fonte toda branca (sem o estilos das cores):
 - Verificar se seu `~/.bash_profile` tem essas linhas para iniciar o `~/.bashrc`:
   ```sh
