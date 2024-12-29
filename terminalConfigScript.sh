@@ -20,7 +20,7 @@ yay -S --noconfirm docker
 echo 'Habilite a distro nas Resources do Docker Desktop...'
 
 #Instalar ferramentas dev
-yay -S --noconfirm vim neovim rust nodejs npm python python-pip github-cli yarn rm-improved cointop
+yay -S --noconfirm vim neovim rust nodejs npm python python-pip github-cli yarn cointop
 
 cargo install rm-improved
 
