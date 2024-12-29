@@ -1,7 +1,7 @@
 
 Para o assistente de scripts:
 ```
-curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptsInstallManager.sh | bash -s 1 2 3...
+curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptsInstallManager.sh | bash -s
 ```
 
 
