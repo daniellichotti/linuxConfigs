@@ -80,6 +80,7 @@ source $ZSH/oh-my-zsh.sh
 alias aliashelp="curl -s https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/aliases" # Mostra os aliases
 
 # general
+alias updatePackages="sudo pacman -Syu --noconfirm" #Sincroniza com repositórios e atualiza os pacontes
 alias ..="cd .." # Volta uma pasta
 alias ...="cd ../.." # Volta duas pastas
 alias rm="rm -i"  # Pergunta antes de excluir
