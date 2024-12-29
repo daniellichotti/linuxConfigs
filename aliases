@@ -10,6 +10,13 @@ cp # Copia com confirmacao
 mv # move com confirmacao
 cls # limpar a tela
 htop # htop com uma visao mais amigavel
+btop # btop
+fuck # autocorreção de comandos errados
+cointop # cotação bitcoin
+ddgr # pesquisa sobre algo ddgr <pesquisa>
+khal # calendario
+navi # cheatsheets
+
 
 --------------tmux--------------
 th # Mostra um cheatsheet do tmux
