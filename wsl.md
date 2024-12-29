@@ -63,6 +63,24 @@ set /p distroName="Digite o nome da distro: " && set /p userPassword="Digite a s
 sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman -Syu --noconfirm
 ```
 fonte: https://www.tabnews.com.br/dchueri/configurando-o-archlinux-no-windows-com-wsl-2
+
+## kali-linux
+1) Enable the Windows Subsystem for Linux
+2) Restart your computer.
+3) Go to the microsoft store and search for Kali Linux.
+4) Install Kali Linux and choose a username and password.
+5) Run sudo apt update && sudo apt upgrade -y
+6) After updating, run sudo apt install kali-desktop-xfce -y
+7) After installing, run sudo apt install xrdp -y
+8) After that finishes installing, run sudo service xrdp start
+9) Run ip add and find the ip address (eth0 first ip)
+10) Open up remote desktop connection app on windows and paste the ip address.
+11) Login with your username and password. Kali linux should start.
+
+
+sudo apt install theharvester
+theHarvester -d <EmailAdressFromADomain> -l <500 ToLimitResults> -b <SearchSource> ex.:theHarvester -d kali.org -b duckduckgo # https://www.kali.org/tools/theharvester/
+#https://github.com/termuxhackers-id/SIGIT
   
 ## WSL CheatSheet  
 ### Instalando o WSL:
