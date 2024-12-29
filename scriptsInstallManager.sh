@@ -1,5 +1,5 @@
 #!/bin/bash
-# curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptsInstallManager.sh | zsh -s 1 2 3...
+# curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptsInstallManager.sh | bash -s 1 2 3...
 
 # Verifica se argumentos foram passados
 if [ $# -gt 0 ]; then
