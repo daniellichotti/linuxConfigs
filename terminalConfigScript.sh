@@ -25,7 +25,7 @@ yay -S --noconfirm vim neovim rust nodejs npm python python-pip github-cli yarn 
 cargo install rm-improved
 
 #Instalar Brew
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 #Astrovim
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim && rm -rf ~/.config/nvim/.git
