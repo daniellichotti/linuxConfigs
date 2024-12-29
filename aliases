@@ -1,4 +1,5 @@
 --------------General--------------
+updatePackages #Sincroniza com repositórios e atualiza os pacontes
 aliashelp # Mostra os aliases
 .. # Volta uma pasta
 ... # Volta duas pastas
