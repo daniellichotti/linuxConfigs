@@ -16,6 +16,8 @@ cointop # cotação bitcoin
 ddgr # pesquisa sobre algo ddgr <pesquisa>
 khal # calendario
 navi # cheatsheets
+ctop # docker containers metrics
+newsboat # rss feed
 
 
 --------------tmux--------------
