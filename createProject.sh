@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "Escolha uma opção:"
 echo "1. Projeto React JS com Vite"
 echo "2. Projeto React Native com Expo"
@@ -8,22 +7,20 @@ echo "3. Projeto Python com Flask"
 echo "4. Projeto Python com Django"
 echo "0. Sair"
 
-# Ler entrada do usuário com compatibilidade para Zsh
-vared -p "Digite o número da opção: " -c opcao
+# Ler entrada do usuário
+read -p "Digite o número da opção: " opcao
 
 case "$opcao" in
     1)
         echo "Criando Projeto React JS com Vite..."
         npm create vite@latest
-        opcao=''
         ;;
     2)
         echo "Criando Projeto React Native com Expo..."
         npx create-expo-app --template
-        opcao=''
         ;;
     3)
-        vared -p "Digite o nome do projeto: " -c nomeProjeto
+        read -p "Digite o nome do projeto: " nomeProjeto
         mkdir "$nomeProjeto"
         cd "$nomeProjeto"
         python -m venv venv
@@ -43,11 +40,9 @@ case "$opcao" in
         echo "    app.run(debug=True)" >> app.py
         echo "Para iniciar o server: python app.py"
         echo "Para sair do venv: deactivate"
-        opcao=''
-        nomeProjeto=''
         ;;
     4)
-        vared -p "Digite o nome do projeto: " -c nomeProjeto
+        read -p "Digite o nome do projeto: " nomeProjeto
         mkdir "$nomeProjeto"
         cd "$nomeProjeto"
         python -m venv venv
@@ -55,18 +50,11 @@ case "$opcao" in
         pip install django
         django-admin startproject "$nomeProjeto" .
         echo "Para iniciar o server: python manage.py runserver"
-        opcao=''
         ;;
     0)
         echo "Saindo..."
-        opcao=''
-        break
         ;;
     *)
         echo "Opção inválida!"
-        opcao=''
-        break
         ;;
 esac
-echo
-}
