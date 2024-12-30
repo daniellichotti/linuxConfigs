@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Função para instalar Node.js em sistemas baseados no Debian
-install_node_debian() {
+debianInstaller() {
   echo "Detectado sistema baseado no Debian."
   echo "Atualizando lista de pacotes..."
   # sudo apt update
@@ -11,7 +11,7 @@ install_node_debian() {
 }
 
 # Função para instalar Node.js em sistemas baseados no Arch
-install_node_arch() {
+archInstaller() {
   echo "Detectado sistema baseado no Arch."
   echo "Atualizando lista de pacotes..."
   # sudo pacman -Syu --noconfirm
@@ -22,9 +22,9 @@ install_node_arch() {
 
 # Detectar a base do sistema operacional
 if grep -q "debian" /etc/os-release || grep -q "Ubuntu" /etc/os-release; then
-  install_node_debian
+  debianInstaller
 elif grep -q "arch" /etc/os-release || grep -q "Manjaro" /etc/os-release; then
-  install_node_arch
+  archInstaller
 else
   echo "Sistema operacional não suportado neste script."
   exit 1
