@@ -21,9 +21,9 @@ install_node_arch() {
 }
 
 # Detectar a base do sistema operacional
-if grep -q "Debian" /etc/os-release || grep -q "Ubuntu" /etc/os-release; then
+if grep -q "debian" /etc/os-release || grep -q "Ubuntu" /etc/os-release; then
   install_node_debian
-elif grep -q "Arch" /etc/os-release || grep -q "Manjaro" /etc/os-release; then
+elif grep -q "arch" /etc/os-release || grep -q "Manjaro" /etc/os-release; then
   install_node_arch
 else
   echo "Sistema operacional não suportado neste script."
