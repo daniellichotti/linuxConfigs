@@ -35,7 +35,7 @@ archInstaller() {
   echo "Atualizando lista de pacotes..."
   sudo pacman -Syu --noconfirm
   
-  curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/terminalConfigScript.sh | bash
+  curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/archConfigInstaller.sh | bash
 }
 
 # Detectar a base do sistema operacional
