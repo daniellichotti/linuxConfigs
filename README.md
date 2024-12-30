@@ -9,9 +9,9 @@ curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/he
 ```
 
 
-Ultimate Terminal:
+Install Config Arch:
 ```
-curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/terminalConfigScript.sh | bash
+curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/archConfigInstaller.sh | bash
 ```
 para criar um projeto em react sem nada com vite:
 ```
