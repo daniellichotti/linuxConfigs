@@ -3,6 +3,10 @@ Para o assistente de scripts:
 ```
 curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptsInstallManager.sh | bash -s
 ```
+Para o verif o so:
+```
+curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scriptForBothSystems.sh | bash -s
+```
 
 
 Ultimate Terminal:
