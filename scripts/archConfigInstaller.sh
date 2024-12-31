@@ -62,8 +62,8 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh && echo "Atuin
 
 # Baixando arquivos de configuração
 echo 'Baixando arquivos de configuração...'
-curl -o ~/.zshrc https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/zshrc
-curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/starship
-curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/tmux.conf
+curl -o ~/.zshrc https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/configs/zshrc
+curl -o ~/.config/starship.toml https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/configs/starship
+curl -o ~/.tmux.conf https://raw.githubusercontent.com/daniellichotti/linuxConfigs/main/configs/tmux.conf
 
 echo "Configuração concluída! Reinicie o terminal para aplicar as mudanças."
