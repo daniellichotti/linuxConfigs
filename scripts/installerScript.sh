@@ -10,8 +10,6 @@ debianInstaller() {
   sudo apt update
 
   curl -fsSL https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scripts/debianConfigInstaller.sh | bash
-
-  echo "Configuração concluída! Reinicie o terminal para aplicar as mudanças."
 }
 
 # Função para instalar Node.js em sistemas baseados no Arch

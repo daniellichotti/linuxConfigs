@@ -4,11 +4,12 @@ set -e  # Interrompe o script em caso de erros
 
 # Instalar git e base-devel
 echo 'Instalando Pacotes...'
-sudo apt install -y wget git docker.io yarn vim neovim rustc nodejs npm python3 python3-pip gh zsh tmux zoxide figlet lolcat bat fzf man-db fd-find ffmpeg ffmpegthumbnailer p7zip jq poppler-utils ripgrep imagemagick fortune-mod neofetch cmatrix htop btop khal ddgr thefuck && 
+sudo apt install -y wget git docker.io yarn vim neovim rustc nodejs npm python3 python3-pip gh zsh tmux zoxide figlet lolcat bat man-db fd-find ffmpeg ffmpegthumbnailer p7zip jq poppler-utils ripgrep imagemagick fortune-mod neofetch cmatrix htop btop khal ddgr && 
 echo "Pacotes instalados com sucesso! Habilite a distro nas resources do Docker!"
 
-# Para pacotes de fontes não nativas:
-sudo snap install figlet
+# Instalar o fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
 
 # Instalar o zoxide, exa e rm-improved via cargo:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -24,7 +25,7 @@ echo 'Instalando Brew...'
 echo 'Brew instalado com sucesso!'
 
 #Instalar ctop via Brew
-brew install ctop navi cointop
+brew install ctop navi cointop thefuck
 
 #Astrovim
 echo 'Instalando Astrovim...'
