@@ -20,21 +20,21 @@ yay -S --noconfirm docker
 echo 'Habilite a distro nas Resources do Docker Desktop...'
 
 #Instalar ferramentas dev
-yay -S --noconfirm vim neovim rust nodejs npm python python-pip github-cli yarn
+# yay -S --noconfirm 
 
-cargo install rm-improved
+#cargo install rm-improved
 
 #Instalar Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install cointop
+brew install cointop tlrc rm-improved
 
 #Astrovim
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim && rm -rf ~/.config/nvim/.git
 
 # Instalar pacotes úteis
 echo 'Instalando pacotes úteis...'
-sudo pacman -S --noconfirm zsh tmux zoxide exa figlet lolcat bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick fortune-mod neofetch cmatrix htop btop ctop navi khal ddgr thefuck 
+sudo pacman -S --noconfirm zsh tmux vim neovim rust nodejs npm python python-pip github-cli yarn zoxide exa figlet lolcat bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick fortune-mod neofetch cmatrix btop ctop navi khal ddgr thefuck 
 echo "Pacotes instalados com sucesso!"
 
 # Instalar OhMyZsh
