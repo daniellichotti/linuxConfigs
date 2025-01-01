@@ -1,3 +1,6 @@
+%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+para pegar as infos do terminal
+
 ## Arch
 1) setfont ter-132n # aumenta a fonte
 2) ping google.com # testar net
