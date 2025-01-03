@@ -20,6 +20,10 @@ case "$opcao" in
         echo "Criando Projeto React Native com Expo..."
         npx create-expo-app --template
         ;;
+    3)
+        echo "Criando Projeto React Native com Expo..."
+        wget  https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scripts/devScripts/createNodeProject.sh && chmod +x createNodeProject.sh && ./createNodeProject.sh && rm createNodeProject.sh
+        ;;
     0)
         echo "Saindo..."
         ;;
