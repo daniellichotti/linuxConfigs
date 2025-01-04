@@ -15,3 +15,8 @@ para criar um projeto em react sem nada com vite:
 ```
 wget  https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/createProject.sh && zsh ./createProject.sh && rm createProject.sh
 ```
+
+para criar projetos dev:
+```
+wget  https://raw.githubusercontent.com/daniellichotti/linuxConfigs/refs/heads/main/scripts/devScripts/createProject.sh && zsh ./createProject.sh && rm createProject.sh
+```
