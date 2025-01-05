@@ -194,7 +194,11 @@ alias gst="git status"
 alias gaa="git add ."
 alias gcmsg="git commit -m"
 alias ggp="git push origin feature/branch"
+
 #alias github-cli
+alias grc="gh repo create"
+alias gbw="gh browse"
+
 gcreate() {
     gh repo create "$1" --public --gitignore "$2" --add-readme --clone && 
     cd "$1" && 
