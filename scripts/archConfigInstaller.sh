@@ -21,7 +21,7 @@ rm -rf yay && echo "Yay instalado com sucesso!"
 sudo pacman -S --noconfirm zsh tmux vim neovim zoxide exa figlet lolcat bat ripgrep fzf man-pages man-db fd yazi neofetch btop ctop navi khal ddgr thefuck fortune-mod cmatrix 
 
 # dev
-sudo pacman -S --noconfirm rust nodejs npm yarn python python-pip github-cli jq docker
+sudo pacman -S --noconfirm rust nodejs npm yarn python python-pip github-cli jq docker docker-compose
 
 #Astrovim
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim && rm -rf ~/.config/nvim/.git
