@@ -14,27 +14,27 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay && echo "Yay instalado com sucesso!"
 
-echo 'Instalando Docker...'
-#Instalar pacotes com Yay
-yay -S --noconfirm docker
-echo 'Habilite a distro nas Resources do Docker Desktop...'
-
-#Instalar ferramentas dev
-# yay -S --noconfirm 
-
-#cargo install rm-improved
-
 #Instalar Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install cointop tlrc rm-improved
+# pacotes terminal
+sudo pacman -S --noconfirm zsh tmux vim neovim zoxide exa figlet lolcat bat ripgrep fzf man-pages man-db fd yazi neofetch btop ctop navi khal ddgr thefuck fortune-mod cmatrix 
+
+# dev
+sudo pacman -S --noconfirm rust nodejs npm yarn python python-pip github-cli jq docker
 
 #Astrovim
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim && rm -rf ~/.config/nvim/.git
 
+# pacotes AUR
+yay -S --noconfirm rm-improved tlrc-bin
+
 # Instalar pacotes úteis
-echo 'Instalando pacotes úteis...'
-sudo pacman -S --noconfirm zsh tmux vim neovim rust nodejs npm python python-pip github-cli yarn zoxide exa figlet lolcat bat fzf man-pages man-db fd yazi ffmpegthumbnailer ffmpeg p7zip jq poppler ripgrep imagemagick fortune-mod neofetch cmatrix btop ctop navi khal ddgr thefuck 
+sudo pacman -S --noconfirm gthumb ffmpegthumbnailer ffmpeg p7zip poppler imagemagick
+
+# Aplicativos inuteis
+yay -S --noconfirm ani-cli manga-cli-git ascii-image-converter-git
+
 echo "Pacotes instalados com sucesso!"
 
 # Instalar OhMyZsh
