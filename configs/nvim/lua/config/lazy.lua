@@ -21,6 +21,7 @@ require("lazy").setup({
     --
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    { "catppuccin/nvim", name = "catppuccin" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -54,3 +55,13 @@ require("lazy").setup({
     },
   },
 })
+
+-- Adicione o código de configuração do tema Catppuccin aqui:
+require("catppuccin").setup({
+  flavour = "frappe", -- ou "latte", "macchiato", "mocha", "frappe"
+  transparent_background = false, -- Ativa o fundo transparente
+  term_colors = true, -- Ativa as cores no terminal
+})
+
+-- Ativar o tema Catppuccin
+vim.cmd("colorscheme catppuccin")
